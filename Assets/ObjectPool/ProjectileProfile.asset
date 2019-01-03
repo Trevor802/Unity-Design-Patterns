@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7e4dcc129b284449b44e282b964ff13, type: 3}
-  m_Name: CubeProfile
+  m_Script: {fileID: 11500000, guid: d6a2ece7352b6234db18367fbabf4259, type: 3}
+  m_Name: ProjectileProfile
   m_EditorClassIdentifier: 
-  poolName: Cube
-  prefab: {fileID: 4444405598881124623, guid: 3a82362de9f352444abdaf5037c8318b, type: 3}
+  poolName: Projectile
+  prefab: {fileID: 4444405598881124623, guid: a707d903dcc85bd4b98cff9dcdb4b74d, type: 3}
   size: 150
