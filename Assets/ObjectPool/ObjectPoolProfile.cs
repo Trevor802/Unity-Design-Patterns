@@ -2,7 +2,7 @@
 
 namespace ObjectPool
 {
-    [CreateAssetMenu(menuName = "ObjectPool/Pool Profile")]
+    [CreateAssetMenu(menuName = "Profile/Pool Profile")]
     public class ObjectPoolProfile : ScriptableObject
     {
         public string poolName;
