@@ -9,7 +9,7 @@ public class InterpreterClient : MonoBehaviour
         VariableExp x = new VariableExp("X");
         VariableExp y = new VariableExp("Y");
         BooleanExp expression = new OrExp(new AndExp(new ConstantExp("true"), x),
-            new AndExp(y, new NotExp(x)));
+            new AndExp(y, new NotExp(x))); // (true and x) or (y and (not x))
         context.Assign(x, false);
         context.Assign(y, true);
         Debug.Log(expression.Evaluate(context));
