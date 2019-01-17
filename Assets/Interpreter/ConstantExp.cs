@@ -4,17 +4,28 @@ namespace InterpreterPattern
 {
     public class ConstantExp : BooleanExp
     {
-        private string name;
+        public string Name { get; }
 
         public ConstantExp(string name)
         {
             Assert.IsTrue(name == "true" || name == "false");
-            this.name = name;
+            Name = name;
         }
 
         public override bool Evaluate(Context context)
         {
-            return name == "true";
+            return Name == "true";
+        }
+
+        public override BooleanExp Replace(string name, BooleanExp exp)
+        {
+            if (name == Name) return exp.Copy();
+            return new ConstantExp(Name);
+        }
+
+        public override BooleanExp Copy()
+        {
+            return new ConstantExp(Name);
         }
     }
 }

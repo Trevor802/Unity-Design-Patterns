@@ -15,5 +15,16 @@
         {
             return operand1.Evaluate(context) || operand2.Evaluate(context);
         }
+
+        public override BooleanExp Replace(string name, BooleanExp exp)
+        {
+            return new OrExp(operand1.Replace(name, exp),
+                            operand2.Replace(name, exp));
+        }
+
+        public override BooleanExp Copy()
+        {
+            return new OrExp(operand1.Copy(), operand2.Copy());
+        }
     }
 }

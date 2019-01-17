@@ -13,5 +13,10 @@ public class InterpreterClient : MonoBehaviour
         context.Assign(x, false);
         context.Assign(y, true);
         Debug.Log(expression.Evaluate(context));
+
+        VariableExp z = new VariableExp("Z");
+        NotExp notZ = new NotExp(z);
+        context.Assign(z, true);
+        Debug.Log(expression.Replace("Y", notZ).Evaluate(context));
     }
 }
