@@ -4,7 +4,7 @@ namespace StatePattern
 {
     public class NullState : State
     {
-        private Vector3 destination;
+        private Vector3 destination = Vector3.zero;
 
         public NullState(Character character) : base(character)
         {
