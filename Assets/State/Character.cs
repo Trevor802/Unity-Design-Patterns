@@ -10,7 +10,7 @@ namespace StatePattern
         private void Awake()
         {
             initName = name;
-            SetState(new NullState(this));
+            SetState(new IdleState(this));
         }
 
         private void Update()

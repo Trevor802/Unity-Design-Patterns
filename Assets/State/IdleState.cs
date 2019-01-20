@@ -2,11 +2,11 @@
 
 namespace StatePattern
 {
-    public class NullState : State
+    public class IdleState : State
     {
         private Vector3 destination = Vector3.zero;
 
-        public NullState(Character character) : base(character)
+        public IdleState(Character character) : base(character)
         {
             stateName = "returning";
         }

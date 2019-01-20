@@ -22,7 +22,7 @@ namespace StatePattern
             if (wanderTimer > wanderTime)
             {
                 wanderTimer = 0;
-                character.SetState(new NullState(character));
+                character.SetState(new IdleState(character));
             }
         }
 
